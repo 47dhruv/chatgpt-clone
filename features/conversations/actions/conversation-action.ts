@@ -1,4 +1,4 @@
-"user server"
+"use server"
 
 import { prisma } from "@/lib/db/db"
 import { requireUser } from "@/features/auth/action/require-user";
@@ -9,7 +9,7 @@ export type ConversationListItem = {
     id: string;
     title: string;
     isPinned: boolean;
-    isArchevied: boolean;
+    isArchived: boolean;
     lastMessageAt: Date;
     createdAt: Date;
     updatedAt: Date;
@@ -58,7 +58,7 @@ export async function listConversation():Promise<ConversationListItem[]> {
             id: true,
             title: true,
             isPinned: true,
-            isArchevied: true,
+            isArchived: true,
             lastMessageAt: true,
             createdAt: true,
             updatedAt: true,
